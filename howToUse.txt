@@ -1,0 +1,120 @@
+----------------------------------
+controllerSynthesisDM:
+  DM_STEController.mat:
+   controller being used for simulation and experiments (H infinity)
+
+  DM_STEController_PI.mat:
+   PI controller being used for simulation and experiments (H infinity)   
+
+  mirror-DM-STE-20150826.mat:
+   model of the deformable mirror (static, dynamic and reduced)
+  
+  muSynthesis_mimo_DM_STE.m:
+   script to perform non-smooth mu synthesis (full order)
+
+  muSynthesis_mimo_DM_STE_PIcontroller.m:
+   script to perform non-smooth mu synthesis (PI controller)
+  
+  workspace-hinfstruct-peak3dot32.mat:
+   workspace of the synthesized controller (full order)
+
+  workspace-hinfstruct-PI-10dot138.mat:
+   workspace of the synthesized controller (PI controller)
+----------------------------------
+
+
+----------------------------------
+controllerSynthesisTT:
+  synthesis of tip/tilt controller with the non-smooth mu synthesis
+
+  muSynthesis_mimo_TipTilt.m:
+   script to perform non-smooth mu synthesis
+   
+  tipTiltController.mat:
+   controller being used for simulation and experiments
+   
+  workspace_tipTiltcontroller.mat:
+   workspace of the synthesized controller
+----------------------------------
+
+
+----------------------------------
+experimentalModel:
+  complete simulation including application of AIF/control matrix and noise
+  
+  createAIFPerfect.m:
+   script to calculate perfect AIF via captured model
+  
+  experimental_setup.slx:
+   closed-loop simulation
+   
+  experimental_setup_AIF.slx:
+   simulation of recording AIF
+   
+  init_experimental_setup.m:
+   basic initialization of all required variables
+----------------------------------
+
+
+----------------------------------
+PythonGetInfluenceFct:
+  capturing/recording the data for calculation of the AIF
+  
+  getInfluenceFct.py
+   Python script for automatic capturing of the required
+   data for AIF calculation
+   
+  getInfluenceFct_*.py
+   options as well as general functions for getInfluenceFct.py
+----------------------------------
+
+
+----------------------------------
+PythonReadMBXScript:
+  storing of data from the Simulink/RTAI model
+  
+  readMBX.py:
+   Python script for receiving data from the real-time target and
+   storing the data as a .mat file
+----------------------------------
+
+
+----------------------------------
+RTAISimulinkModel:
+  RTAI Simulink model for executable generation (works only with RTAI
+  modules on special patched Matlab on Linux)
+  
+  controlMirror.slx:
+   basic Simulink model for application generation
+----------------------------------
+
+
+----------------------------------
+simulateUncertainDM:
+  scripts to simulated closed-loop with different uncertainties
+  
+  evalDMSim_uncertain.m:
+   Matlab script to generate plot by remote simulation
+
+  getStaticModel.m:
+   calculates static model out of a transfer function
+
+  mimoSimulation_noInit_uncertain.slx:
+   Simulink model which is used for simulating closed-loop
+  
+----------------------------------
+
+
+----------------------------------
+zonalReconstruction:
+  performs a zonal reconstruction of slope data e.g. from an SHWFS
+  
+  createSpots.m:
+   simple function which create spot pattern expected from an SHWFS sensor
+  
+  zonalReconstruction.m:
+   function ofr zonal reconstruction based on slope data
+
+  zonalReconstructionScript.m:
+   exemplary script for visualization
+----------------------------------
